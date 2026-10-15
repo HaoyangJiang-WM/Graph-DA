@@ -751,7 +751,7 @@ def main() -> None:
                     axis.text(
                         0.975,
                         0.975,
-                        f"SAR update: +{added_count} cells above {wet_threshold:.2f} m",
+                        f"SAR update: +{added_count} floodplain cells above {wet_threshold:.2f} m",
                         transform=axis.transAxes,
                         ha="right",
                         va="top",
