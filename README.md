@@ -48,7 +48,12 @@ an indirect and lossy observation:
 Graph-NAO is intended to learn the part that is difficult to specify from a
 small ensemble, while leaving known geometry, likelihood and physics explicit:
 
-$$ W_{si}=\frac{\lvert P_s\cap C_i\rvert}{\lvert P_s\rvert},\qquad \widehat{y}=\mathcal{H}_{G,W}(x) $$
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/equations/observation-operator-dark.svg">
+    <img src="assets/equations/observation-operator-light.svg" alt="W_si = |P_s intersect C_i| / |P_s|, and y-hat = H_{G,W}(x)">
+  </picture>
+</p>
 
 where `W` is the exact overlap between SAR pixel $P_s$ and hydraulic control
 volume $C_i$. Observations stay in pixel space; states stay on the hydraulic
@@ -56,7 +61,12 @@ graph.
 
 The current minimal research decomposition is
 
-$$ p(s,\theta\mid y,c)=p(\theta\mid s,c)p(s\mid y,c) $$
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/equations/conditional-factorization-dark.svg">
+    <img src="assets/equations/conditional-factorization-light.svg" alt="p(s, theta | y, c) = p(theta | s, c) p(s | y, c)">
+  </picture>
+</p>
 
 under the registered assumption that SAR is conditionally independent of the
 latent restart variables $\theta$ once the current hydraulic state $s$ is
@@ -76,7 +86,12 @@ pixel geometry or inventing an unconstrained image-to-depth correction.
 The conditional generator is trained with the fair Energy Score on held-out
 simulator truth:
 
-$$ \widehat{\mathrm{ES}}=\frac{1}{M}\sum_k d\left(x_k^a,x^\star\right)-\frac{1}{2M(M-1)}\sum_{k\ne\ell}d\left(x_k^a,x_\ell^a\right) $$
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/equations/fair-energy-score-dark.svg">
+    <img src="assets/equations/fair-energy-score-light.svg" alt="Fair Energy Score: mean distance from analysis members to truth minus half the mean pairwise member distance">
+  </picture>
+</p>
 
 This is a research prototype. The learned branch has not yet established a
 cross-basin SOTA result, and the repository does not claim otherwise.
