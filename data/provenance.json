@@ -1,0 +1,39 @@
+{
+  "schema": "graph_da_argens_osse_visualization_v1",
+  "event": "Argens2010",
+  "truth_id": 382,
+  "display_minutes": [0, 15, 30, 45, 60],
+  "assimilation_minutes": [0, 30, 60],
+  "ensemble_size": 8,
+  "methods": ["NoDA", "registered full-covariance ETKF"],
+  "wet_threshold_m": 0.05,
+  "source": {
+    "title": "Benchmark dataset for hydraulic simulations of flash floods in the French Mediterranean region",
+    "doi": "10.57745/IXXNAY",
+    "declared_license": "Etalab Open Licence 2.0",
+    "crs": "EPSG:2154"
+  },
+  "experiment": "Simulated OSSE on event-based terrain and river geometry; simulated hydraulics and simulated change-SAR",
+  "state_transition": "Each method propagates its own complete previous analysis through the same registered physical solver before the next acquisition.",
+  "red_boundary": "ETKF post-analysis ensemble-mean depth >= 0.05 m and immediate ETKF pre-analysis ensemble-mean depth < 0.05 m",
+  "da_added_control_volume_count_full_graph": {
+    "0": 162,
+    "30": 52,
+    "60": 12
+  },
+  "immediate_update_diagnostics": {
+    "30": {
+      "depth_energy_pre": 0.07264841347932816,
+      "depth_energy_post": 0.06316657364368439,
+      "wet_brier_pre": 0.006200681906193495,
+      "wet_brier_post": 0.005591778550297022
+    },
+    "60": {
+      "depth_energy_pre": 0.060281649231910706,
+      "depth_energy_post": 0.05925070866942406,
+      "wet_brier_pre": 0.004809626378118992,
+      "wet_brier_post": 0.004945882596075535
+    }
+  },
+  "claim_boundary": "Traditional ETKF visualization only; not real SAR, not a learned-method result, and not SOTA evidence."
+}

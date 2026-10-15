@@ -1,0 +1,3 @@
+0956c5bb3cc736ca92ea8c52a70f6b83052912a7addbf6d3ff151be65e36c9ac  assets/argens-etkf-0-60min.gif
+f1445b93ff46484aa3f5866ad916062f5f10c612288e612ec64d9fb0a90bb573  assets/argens-etkf-60min.png
+ee2666e7983a3324790ecfb4aa74a6cfc5f4634b0f2c335917fced780fb07d62  data/argens-2010-osse-0-60min.npz
