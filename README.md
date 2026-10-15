@@ -48,10 +48,10 @@ an indirect and lossy observation:
 Graph-NAO is intended to learn the part that is difficult to specify from a
 small ensemble, while leaving known geometry, likelihood and physics explicit:
 
-$$
+```math
 W_{si}=\frac{|P_s\cap C_i|}{|P_s|},\qquad
 \widehat y=\mathcal H_{G,W}(x),
-$$
+```
 
 where `W` is the exact overlap between SAR pixel $P_s$ and hydraulic control
 volume $C_i$. Observations stay in pixel space; states stay on the hydraulic
@@ -59,9 +59,9 @@ graph.
 
 The current minimal research decomposition is
 
-$$
+```math
 p(s,\theta\mid y,c)=p(\theta\mid s,c)\,p(s\mid y,c),
-$$
+```
 
 under the registered assumption that SAR is conditionally independent of the
 latent restart variables $\theta$ once the current hydraulic state $s$ is
@@ -81,11 +81,11 @@ pixel geometry or inventing an unconstrained image-to-depth correction.
 The conditional generator is trained with the fair Energy Score on held-out
 simulator truth:
 
-$$
+```math
 \widehat{\mathrm{ES}}=
 \frac1M\sum_k d(x_k^a,x^\star)
 -\frac{1}{2M(M-1)}\sum_{k\ne\ell}d(x_k^a,x_\ell^a).
-$$
+```
 
 This is a research prototype. The learned branch has not yet established a
 cross-basin SOTA result, and the repository does not claim otherwise.
